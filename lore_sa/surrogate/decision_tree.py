@@ -48,7 +48,7 @@ class DecisionTreeSurrogate(Surrogate):
         :param [bool] prune_tree:
         :return:
         """
-        self.dt = DecisionTreeClassifier()
+        self.dt = DecisionTreeClassifier(class_weight='balanced', random_state=42)
         if self.prune_tree is True:
             param_list = {'min_samples_split': [0.01, 0.05, 0.1, 0.2, 3, 2],
                           'min_samples_leaf': [0.001, 0.01, 0.05, 0.1, 2, 4],
