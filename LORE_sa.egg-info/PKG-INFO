@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: LORE_sa
+Version: 0.0.1
+Summary: LOREM explainer package
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Dynamic: license-file
