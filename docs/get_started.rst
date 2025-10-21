@@ -207,7 +207,7 @@ Alternative scenarios that would lead to different predictions:
 .. code-block:: python
 
     counterfactuals = explanation['counterfactuals']
-    # Example: IF age <= 30 OR income > 50000 THEN class = 1
+    # Example: IF age > 30 OR income > 50000 THEN class = 1
 
 Deltas
 ------
@@ -217,7 +217,7 @@ Minimal changes needed to reach each counterfactual:
 .. code-block:: python
 
     deltas = explanation['deltas']
-    # Example: [age <= 30] (decrease age to at most 30)
+    # Example: [income > 50000] (increase income to change prediction)
 
 Feature Importances
 -------------------
@@ -237,7 +237,7 @@ How well the explanation approximates the black box (0 to 1):
 .. code-block:: python
 
     fidelity = explanation['fidelity']
-    # Example: 0.95 (the surrogate agrees with the black box 95% of the time)
+    # Example: 0.95 (the surrogate agrees with the black box 95% of the samples in the neighborhood)
 
 A fidelity close to 1.0 indicates the explanation is highly reliable.
 
